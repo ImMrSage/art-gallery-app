@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ArtPiecesList({ image, title, artist }) {
+export default function ArtPiecesItem({ image, title, artist }) {
   return (
     <figure>
       <h2>{title}</h2>

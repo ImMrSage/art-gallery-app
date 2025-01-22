@@ -1,4 +1,4 @@
-import ArtPiecesList from "../ArtPiecesList";
+import ArtPiecesItem from "../ArtPiecesItem";
 
 export default function ArtPieces({ pieces }) {
   console.log(pieces);
@@ -8,7 +8,7 @@ export default function ArtPieces({ pieces }) {
         <ul>
           {pieces?.map((piece) => (
             <li key={piece.slug}>
-              <ArtPiecesList
+              <ArtPiecesItem
                 image={piece.imageSource}
                 title={piece.name}
                 artist={piece.artist}
