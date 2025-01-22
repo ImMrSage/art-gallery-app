@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArtPiecesDetail({
   image,
@@ -10,7 +11,9 @@ export default function ArtPiecesDetail({
 }) {
   return (
     <section>
-      <h2>{title}</h2>
+      <button type="button">
+        <Link href="/art-pieces">Back</Link>
+      </button>
       <div>
         <Image src={image} alt="art-piece" width={300} height={300} />
         <ul>
@@ -18,7 +21,11 @@ export default function ArtPiecesDetail({
             <li key={index}>{color}</li>
           ))}
         </ul>
-        <span>by {artist}</span>
+        <p>
+          {artist}: {title}
+        </p>
+        <p>Year: {year}</p>
+        <p>Genre: {genre}</p>
       </div>
     </section>
   );
