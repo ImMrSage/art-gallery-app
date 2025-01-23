@@ -15,6 +15,7 @@ const Section = styled.section`
   text-align: center;
   display: grid;
   place-items: center;
+  margin-bottom: 15%;
 `;
 
 const ButtonContainer = styled.div`
