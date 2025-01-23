@@ -1,6 +1,6 @@
 import Spotlight from "@/components/Spotlight";
 import { useState, useEffect } from "react";
-export default function HomePage({ pieces }) {
+export default function HomePage({ pieces, toggleFavorite, favorites }) {
   const [randomPiece, setRandomPiece] = useState(null);
 
   useEffect(() => {
@@ -18,6 +18,10 @@ export default function HomePage({ pieces }) {
         image={randomPiece.imageSource}
         title={randomPiece.name}
         artist={randomPiece.artist}
+        toggleFavorite={() => toggleFavorite(randomPiece.slug)}
+        isFavorite={
+          favorites.find((piece) => piece.slug === randomPiece.slug)?.isFavorite
+        }
       />
     </>
   );

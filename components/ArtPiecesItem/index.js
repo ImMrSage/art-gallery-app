@@ -2,18 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import FavoriteButton from "../FavoriteButton";
 
-export default function ArtPiecesItem({ image, title, artist, slug }) {
+export default function ArtPiecesItem({
+  image,
+  title,
+  artist,
+  slug,
+  isFavorite,
+  toggleFavorite,
+}) {
   return (
     <>
-      <FavoriteButton />
+      <FavoriteButton isFavorite={isFavorite} toggleFavorite={toggleFavorite} />
       <Link href={`art-pieces/${slug}`}>
-        <figure>
+        <div>
           <h2>{title}</h2>
-          <div>
+          <figure>
             <Image src={image} alt="art-piece" width={300} height={300} />
-            <caption>by {artist}</caption>
-          </div>
-        </figure>
+            <figcaption>by {artist}</figcaption>
+          </figure>
+        </div>
       </Link>
     </>
   );

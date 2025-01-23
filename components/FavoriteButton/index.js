@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function FavoriteButton() {
+export default function FavoriteButton({ isFavorite, toggleFavorite }) {
   return (
-    <button type="button">
+    <button type="button" onClick={toggleFavorite} isfavorite={isFavorite}>
       <Image
         src="/assets/heart.svg"
         alt="favorite-button"
