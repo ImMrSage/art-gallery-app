@@ -1,6 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import FavoriteButton from "../FavoriteButton";
+import styled from "styled-components";
+
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+`;
+
+const Color = styled.li`
+  width: 3rem;
+  height: 3rem;
+  background-color: ${(props) => props.color};
+  border-radius: 50%;
+`;
 
 export default function ArtPiecesDetail({
   image,
@@ -15,14 +31,13 @@ export default function ArtPiecesDetail({
       <button type="button">
         <Link href="/art-pieces">Back</Link>
       </button>
-      <FavoriteButton />
       <div>
         <Image src={image} alt="art-piece" width={300} height={300} />
-        <ul>
+        <List>
           {colors.map((color, index) => (
-            <li key={index}>{color}</li>
+            <Color key={index} color={color} />
           ))}
-        </ul>
+        </List>
         <p>
           {artist}: {title}
         </p>
