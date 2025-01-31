@@ -2,6 +2,7 @@ import useSWR from "swr";
 import GlobalStyle from "../styles";
 import Navigation from "@/components/Navigation";
 import { useState } from "react";
+import styled from "styled-components";
 
 const URL = "https://example-apis.vercel.app/api/art";
 
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
+      <StyledHeader>Art Gallery</StyledHeader>
       <Component
         {...pageProps}
         pieces={data}
@@ -52,3 +54,11 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+const StyledHeader = styled.h1`
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.75rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+`;
