@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
   color: rgb(58, 58, 58);
   font-weight: bold;
   &:hover {
-    color: blue;
+    color: rgb(104, 133, 131);
   }
 `;
 
