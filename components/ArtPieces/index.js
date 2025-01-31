@@ -14,6 +14,7 @@ const Container = styled.ul`
     width: 30rem;
     min-width: 10rem;
     height: 30rem;
+    margin-bottom: 0.5rem;
   }
 `;
 

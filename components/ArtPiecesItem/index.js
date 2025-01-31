@@ -19,6 +19,17 @@ const Figure = styled.figure`
   margin: 0;
 `;
 
+const Title = styled.h2`
+  text-align: center;
+`;
+
+const Caption = styled.figcaption`
+  margin-top: 1rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+  font-size: 1.05rem;
+`;
+
 export default function ArtPiecesItem({
   image,
   title,
@@ -29,7 +40,7 @@ export default function ArtPiecesItem({
 }) {
   return (
     <Figure>
-      <h2>{title}</h2>
+      <Title>{title}</Title>
       <FavoriteButton
         isFavorite={isFavorite}
         toggleFavorite={toggleFavorite}
@@ -47,7 +58,7 @@ export default function ArtPiecesItem({
           />
         </Container>
       </Link>
-      <figcaption>by {artist}</figcaption>
+      <Caption>by {artist}</Caption>
     </Figure>
   );
 }
