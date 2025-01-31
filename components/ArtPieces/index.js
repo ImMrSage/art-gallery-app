@@ -5,6 +5,7 @@ const Container = styled.ul`
   list-style: none;
   padding-left: 0;
   margin: 0;
+  margin-bottom: 12rem;
   display: flex;
   flex-wrap: wrap;
   gap: 7rem;
@@ -14,6 +15,8 @@ const Container = styled.ul`
     width: 30rem;
     min-width: 10rem;
     height: 30rem;
+    margin-bottom: 0.5rem;
+    overflow: visible;
   }
 `;
 

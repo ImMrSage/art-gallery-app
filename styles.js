@@ -9,6 +9,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family:"Playfair Display", serif;
+    color: #4A4A4A;
   }
 `;

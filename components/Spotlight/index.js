@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  width: 80%;
+  width: 100%;
+  max-width: 25rem;
   height: 25rem;
   border: none;
   border-radius: 2rem;
@@ -15,7 +16,7 @@ const Section = styled.section`
   text-align: center;
   display: grid;
   place-items: center;
-  margin-bottom: 15%;
+  margin-bottom: 7rem;
 `;
 
 const ButtonContainer = styled.div`
@@ -23,6 +24,13 @@ const ButtonContainer = styled.div`
   right: 0.5rem;
   top: -3rem;
   z-index: 1;
+`;
+
+const Caption = styled.figcaption`
+  margin-top: 1rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+  font-size: 1.05rem;
 `;
 
 export default function Spotlight({
@@ -54,7 +62,7 @@ export default function Spotlight({
           style={{ objectFit: "cover" }}
         />
       </Container>
-      <figcaption>by {artist}</figcaption>
+      <Caption>by {artist}</Caption>
     </Section>
   );
 }
