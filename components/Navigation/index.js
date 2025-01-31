@@ -9,13 +9,13 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: cyan;
+  background-color: rgb(203, 228, 228);
   list-style: none;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: rgb(58, 58, 58);
   font-weight: bold;
   &:hover {
     color: blue;
@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
 
 const Borderline = styled.hr`
   height: 100%;
-  border: 1px solid black;
+  border: 1px solid rgb(107, 124, 123);
   margin: 0;
 `;
 
